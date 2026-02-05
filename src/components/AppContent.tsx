@@ -5,6 +5,7 @@ import TabNavigation from '../navigation/TabNavigation'
 import StackNavigation from '../navigation/StackNavigation'
 import { useSelector, useDispatch } from 'react-redux'
 import { loginSuccess } from '../redux/AuthSlice'
+import AppNavigation from '../navigation/AppNavigation'
 
 const AppContent = () => {
   const [login, setLogin] = useState(false);
@@ -26,7 +27,7 @@ const AppContent = () => {
 
   return (
     <NavigationContainer>
-      {login || isLogin ? <TabNavigation /> : <StackNavigation />}
+      {login || isLogin ? <AppNavigation /> : <StackNavigation />}
     </NavigationContainer>
   )
 }
