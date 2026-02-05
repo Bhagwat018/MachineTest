@@ -10,7 +10,7 @@ const StackNavigation = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="SignUp" component={SignUpScreen} />
             <Stack.Screen name="LogIn" component={LogInScreen} />
-|        </Stack.Navigator>
+        </Stack.Navigator>
     )
 }
 
