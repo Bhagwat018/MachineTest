@@ -1,7 +1,8 @@
 export type RootStackParamList = {
     SignUp: undefined;
     LogIn: undefined;
-    Tab: undefined;
+    Tab: { screen?: 'Cart' };
+    CartDetail: { product: any };
 };
 
 export type TabParamList = {

@@ -1,13 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types/NavigationTypes";
 import TabNavigation from "./TabNavigation";
+import CartDetailScreen from "../screens/CartDetailScreen";
 
 const AppNavigation = () => {
     const Stack = createNativeStackNavigator<RootStackParamList>();
     return (
         <Stack.Navigator>
             <Stack.Screen name="Tab" component={TabNavigation} />
-            {/* Add more screens here if needed  like details card*/}
+            <Stack.Screen name="CartDetail" component={CartDetailScreen} />
         </Stack.Navigator>
     )
 }

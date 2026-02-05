@@ -10,33 +10,33 @@ const CartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addToCart: (state, action) => {
+        addToCart: (state:any, action:any) => {
             const item = action.payload;
-            const existingItem = state.cartItems.find(cartItem => cartItem.id === item.id);
+            const existingItem = state.cartItems.find((cartItem:any) => cartItem.id === item.id);
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
                 state.cartItems.push({ ...item, quantity: 1 });
             }
         },
-        removeFromCart: (state, action) => {
+        removeFromCart: (state:any, action:any) => {
             const id = action.payload;
-            state.cartItems = state.cartItems.filter(item => item.id !== id);
+            state.cartItems = state.cartItems.filter((item:any) => item.id !== id);
         },
-        increaseQuantity: (state, action) => {
+        increaseQuantity: (state:any, action:any) => {
             const id = action.payload;
-            const item = state.cartItems.find(item => item.id === id);
+            const item = state.cartItems.find((item:any) => item.id === id);
             if (item) {
                 item.quantity += 1;
             }
         },
-        decreaseQuantity: (state, action) => {
+        decreaseQuantity: (state:any, action:any) => {
             const id = action.payload;
-            const item = state.cartItems.find(item => item.id === id);
+            const item = state.cartItems.find((item:any) => item.id === id);
             if (item && item.quantity > 1) {
                 item.quantity -= 1;
             } else {
-                state.cartItems = state.cartItems.filter(cartItem => cartItem.id !== id);
+                state.cartItems = state.cartItems.filter((cartItem:any) => cartItem.id !== id);
             }
         }
     }

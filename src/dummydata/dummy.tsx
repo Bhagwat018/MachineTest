@@ -2,21 +2,21 @@ const Products = {
     cardProducts: [
         {
             id: 1,
-            name: "Monoique Dress",
+            name: "Glorious Dress",
             price: 2000,
-            image: "https://www.mytheresa.com/media/1094/1238/100/9b/P00959181.jpg",
+            image: "https://subhvastra.in/cdn/shop/files/IMG_6891-scaled_2048x.jpg?v=1717146639",
             varientData: [
                 {
                     id: 1,
-                    name: "Monoique Shoes",
+                    name: "Cocktail White Dress",
                     price: 2000,
-                    image: "https://fausto.in/cdn/shop/files/FST_FJDWC-7008_SKY_0_400x.jpg?v=1694239131"
+                    image: "https://www.thedressoutlet.com/cdn/shop/files/TW105_OFFWHITE_3.jpg?v=1730094360"
                 },
                 {
                     id: 2,
-                    name: "Monoique Shoes",
+                    name: "Maxi White Dress",
                     price: 4000,
-                    image: "https://assets.ajio.com/medias/sys_master/root/20240809/FFci/66b546651d763220fa6c1990/-473Wx593H-700272614-pink-MODEL.jpg"
+                    image: "https://dy9ihb9itgy3g.cloudfront.net/products/$uploads/products/10374/12622/12622__f_2.2000.webp"
                 }
             ]
         },

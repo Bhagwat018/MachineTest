@@ -8,7 +8,7 @@ import { LogOutIcon, PlusIcon } from '../components/Icons';
 import { addToCart } from '../redux/CartSlice';
 
 const HomeScreen = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
     const dispatch = useDispatch()
     const { products } = useSelector((state: any) => state.products);
 
@@ -19,7 +19,7 @@ const HomeScreen = () => {
 
     const handleAddToCart = (item: any) => {
         dispatch(addToCart(item));
-        navigation.navigate('Cart' as never);
+        navigation.navigate('CartDetail', { product: item });
     }
     return (
         <View style={styles.container}>
