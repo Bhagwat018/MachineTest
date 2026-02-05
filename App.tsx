@@ -4,42 +4,29 @@
  *
  * @format
  */
+//project-703492750768
+//project-182594267282
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import React, { useEffect } from 'react'
+import { Provider } from 'react-redux'
+import { store } from './src/redux/store'
+import AppContent from './src/components/AppContent'
+import '@react-native-firebase/app'
+import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+const App = () => {
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: "182594267282-12g8phc1qv9jjlp82de42594nl4t7dit.apps.googleusercontent.com",
+    })
+  }, [])
 
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+    <Provider store={store}>
       <AppContent />
-    </SafeAreaProvider>
-  );
+    </Provider>
+  )
 }
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+export default App
 
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
