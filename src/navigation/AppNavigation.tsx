@@ -6,7 +6,7 @@ import CartDetailScreen from "../screens/CartDetailScreen";
 const AppNavigation = () => {
     const Stack = createNativeStackNavigator<RootStackParamList>();
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Tab" component={TabNavigation} />
             <Stack.Screen name="CartDetail" component={CartDetailScreen} />
         </Stack.Navigator>
